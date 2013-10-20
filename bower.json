@@ -1,0 +1,18 @@
+{
+  "name": "html5-tictactoe",
+  "version": "0.0.0",
+  "authors": [
+    "Jollen Chen <jollen@moko365.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3"
+  }
+}

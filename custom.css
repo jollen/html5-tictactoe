@@ -1,0 +1,15 @@
+.bar {
+	display: block;
+	width: 320px;
+}
+
+.grid {
+	background: #222222;
+	color: #ffffff;
+	width: 100px;
+	height: 100px;
+	margin: 3px;
+	font-size:3em;
+	text-align: center;
+	float: right;	
+}

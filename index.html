@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tic Tac</title>
+	<link rel="stylesheet" href="custom.css">
+	<script src="bower_components/jquery/jquery.min.js" type="text/javascript"></script>	
+	<script src="main.exercise.js" type="text/javascript"></script>	
+</head>
+<body>
+	
+<div class="bar">
+	<div class="grid" data-grid-no="0"></div>
+	<div class="grid" data-grid-no="1"></div>
+	<div class="grid" data-grid-no="2"></div>	
+</div>
+<div class="bar">
+	<div class="grid" data-grid-no="3"></div>
+	<div class="grid" data-grid-no="4"></div>
+	<div class="grid" data-grid-no="5"></div>	
+</div>
+<div class="bar">
+	<div class="grid" data-grid-no="6"></div>
+	<div class="grid" data-grid-no="7"></div>
+	<div class="grid" data-grid-no="8"></div>	
+</div>
+
+<script>
+$('.grid').playRound();
+</script>
+</body>
+</html>
