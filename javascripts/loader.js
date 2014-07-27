@@ -23,9 +23,23 @@ require([
 	var app = app || {};
 
 	app.GameView = Backbone.View.extend({
+		el: '#gameBoard',
 		events: {
 			'click .grid': 'playRound'
 		},
+        playRound: function (e) {
+			var me = this.$el.find(e.target),
+				index = me.data('grid-no');
+
+			if (gameModule.getPlayer() === 'me') {
+				me.html("O");
+			} else {
+				me.html("X");
+			}
+
+			gameModule.changeStatus(index);
+			gameModule.changePlayer();
+        }
 	});
 
 	app.gameView = new app.GameView();
