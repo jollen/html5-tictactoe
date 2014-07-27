@@ -7,8 +7,7 @@ requirejs.config({
 	},
    	shim: {
 	    'backbone': {
-	        deps: ['jquery', 'underscore'],
-	        exports: 'Backbone'
+	        deps: ['jquery', 'underscore']
 	    }
     }
 });
@@ -21,5 +20,13 @@ require([
 	'backbone',
 	'javascripts/main.js'		// Game module
 ], function () {
+	var app = app || {};
 
+	app.GameView = Backbone.View.extend({
+		events: {
+			'click .grid': 'playRound'
+		},
+	});
+
+	app.gameView = new app.GameView();
 });
