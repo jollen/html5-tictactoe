@@ -1,7 +1,11 @@
-var gameModule = (function ($) {
+var gameModule = (function () {
 	var player = 'me',
 		board = [-1, -1, -1, -1, -1, -1, -1, -1],
 		m = [-9, -9, -9, -9, -9, -9, -9, -9, -9];
+
+	function getPlayer() {
+		return player;
+	}
 
 	function changePlayer() {
 		if (player === 'me') player = 'you';
@@ -42,4 +46,10 @@ var gameModule = (function ($) {
 			changePlayer();
 		})
 	}
-})($);
+
+	return {
+		getPlayer: getPlayer,
+		changeStatus: changeStatus,
+		changePlayer: changePlayer
+	}
+})();
